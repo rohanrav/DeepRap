@@ -1,2 +1,7 @@
 # DeepRap
-DeepRap
+Eminem lyric generator using LSTM networks.
+
+DeepRap is an lyric generator using Keras and an LSTM network to predict Eminem lyrics. A flask web server is used to serve the predictions to a html webpage.
+
+# How to run
+The website is availible online at http://35.245.252.0/. In order to run the generator locally, run flask_app.py and navigate to the port where the server is running.
