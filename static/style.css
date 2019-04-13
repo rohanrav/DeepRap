@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+html {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+#charNum {
+    display: inline-block;
+}
+
+.display-reminaning {
+    display: inline-block;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.generate {
+    padding: 12px 40px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 55%;
+    letter-spacing: 1px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    background-color: #4a90e2;
+    border: 1px solid #4a90e2;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.generate:hover {
+    background-color: rgba(74, 144, 226, 0.85);
+}
+
+textarea {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    height: 100px;
+    background-color: #fafafa;
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    border-color: #dbdbdb;
+    padding: 10px;
+}
+
+textarea:focus {
+    border-color: #fafafa;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.i {
+    font-size: 90%;
+    display: none;
+}
+
+h4 {
+    margin-top: 50px;
+    font-size: 120%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 400%;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.main-text {
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-15%, -370%);
+}
+
+.results-from {
+    text-align: left;
+}
+
+h4 {
+    text-align: center;
+}
+
+.display-inline-class {
+	display: inline-block;
+}
+
+h2 {
+	text-align: center;
+    margin-top: 130px;
+}
+
+p {
+	text-align: center;
+}
+h3 {
+	text-align: center;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.link {
+    text-decoration: none;
+    color: #4a90e2;
+}
+
+@media only screen and (max-width: 480px) {
+	.main-text {
+		text-align: center;
+        transform: none;
+        top: 20px;
+        left: -353px;
+	}
+
+    body {
+        padding: 5px 10px;
+    }
+
+    .row {
+        padding: 0 4%;
+    }
+
+    h2 {
+        margin-top: 130px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 15px;
+    }
+
+    h1 {
+        font-size: 340%;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+    .spacing {
+        margin-bottom: 25px;
+    }
+
+    .pad {
+        padding: 10px 25px;
+    }
+
+    .spacing-1 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .generate {
+        margin: 10px auto;
+        margin-bottom: 25px;
+    }
+
+    .revolving {
+        margin-top: 130px;
+        margin-bottom: 60px;
+    }
+
+}

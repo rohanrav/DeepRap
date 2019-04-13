@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head> <!--{{ url_for('static', filename='style.css') }}--><!--{{ url_for('static', filename='grid.css') }}-->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,800" rel="stylesheet">
+      <link rel="stylesheet", type="text/css", href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet", type="text/css", href="{{ url_for('static', filename='grid.css') }}">
+   </head>
+   <body>
+      <div class="row">
+      	<h1 class="main-text">DeepRap</h1>
+        <h2 class="revolving">Generating <span class="type"></span> Eminem Lyrics.</h2>
+        <p>DeepRap is a Artificial Intelligence Model that uses LSTM networks to generate Eminem lyrics. </p>
+            <div class="col span-1-of-2 display-inline-class">
+              <h3>Seed Input</h3>
+               <form action = "{{ url_for('hello') }}" method = "POST">
+               <div class="seed">
+                  <textarea type = "text" name = "Name" onkeyup="countChar(this)"></textarea>
+               </div>
+               <div class="results-from">
+                 {% if result == "" %}
+                 {{ value }}
+              {% else %}
+                 {% for key, value in result.items() %}
+                 {{ value }}
+                 {% endfor %}
+              {% endif %}
+               </div>
+              <br>
+              <div class="align-center"><p id="charNum">99</p><p class="display-reminaning">: Characters Remaining</p></div>
+               <p><input type = "submit" value = "GENERATE" class="generate" /></p>
+            </form>
+            </div>
+            <div class="col span-1-of-2 display-inline-class">
+               <h3>How To Use</h3>
+               <p class="spacing">To use the DeepRap Eminem Lyric Generator, enter at least 100 characters into the Seed Input and press Generate!</p>
+               <h6 class="spacing-1">      WARNING:</h6>
+               <ul class="pad">
+                  <li>Depending on the speed of your computer, generating the lyrics may take some time to load. <span style="font-weight: 800; color: #ff0000">Please wait, don't refresh your webpage quickly.</span></li>
+                  <li>The input cannot have any line breaks in it, or else an error will be thrown.</li>
+                  <li>Please enter appropriate data as the new lyrics are generated off of the ones you input.</li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="row">
+          <div class="col span-1-of-2">
+            <h3 style="margin-top: 60px;">Creator</h3>
+            <p style="font-weight: 200;">Created by Rohan Ravindran.</p>
+            <p style="font-weight: 200;">Linkedin: <a href="https://www.linkedin.com/in/rohan-r-74506712b/" class="link">https://www.linkedin.com/in/rohan-r-74506712b/</a></p>
+            <p style="font-weight: 200;">GitHub: <a href="https://github.com/rohanrav" class="link">https://github.com/rohanrav</a></p>
+          </div>
+          <div class="col span-1-of-2">
+            <h3 style="margin-top: 60px;">Example Seeds</h3>
+            <ul style="line-height: 30px; font-weight: 200;" class="pad">
+              <li>But for me to rap like a computer it must be in my genes I got a laptop in my back pocket My pen wil</li>
+              <li>Well, to be truthful the blueprint's Simply rage and youthful exuberance Everybody loves to root for</li>
+              <li>I'm out my Ramen Noodle We have nothin' in common, poodle I'm a Doberman, pinch yourself in the army</li>
+              <li>But it's honestly futile if I don't utilize what I do though For good at least once in a while So I'</li>
+              <li>Rappers are hungry lookin' at me like it's lunchtime I know there was a time where once I Was king o</li>
+            </ul>
+          </div>
+         </div>
+          
+   </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="{{ url_for('static', filename='typed.js') }}"></script>
+   <script>
+      function countChar(val) {
+        var len = val.value.length;
+        if (len >= 100) {
+          val.value = val.value.substring(0, 100);
+        } else {
+          $('#charNum').text(100 - 1 - len);
+        }
+      };
+
+      function change() {
+        $('.loading').css("display", "block");
+      }
+
+      $(document).ready(function() {
+                var options = {
+                    stringsElement: '#typed-strings',
+                    strings: ["revolutionary", "amazing", "fun", "complex", "clear"],
+                    typeSpeed: 200,
+                    loop: true, 
+                    backSpeed: 100  
+                }
+
+      var typed = new Typed(".type", options);});
+    </script>
+</html>
