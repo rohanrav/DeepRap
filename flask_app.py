@@ -43,11 +43,6 @@ def loadModel():
 	filepath = 'weights-eminem/weights-100-New.h5'
 	model = load_model(filepath)
 
-	optimizer = Adam()
-	model.compile(loss='categorical_crossentropy', optimizer=optimizer)
-	model._make_predict_function()
-
-
 	return model
 
 (model, char_to_index_mapping, index_to_character_mapping, unique_chars) = prepModel()
@@ -84,7 +79,8 @@ app.config['SECRET_KEY'] = '063b30152ab0fe3bce2c3b9e39559b98'
 def hello():
 	if request.method == 'POST':
 		result = request.form["Name"]
-		result = re.sub('[,]', ' ', result)
+		result = re.sub('[-,\n\r]', ' ', result)[0:100]
+        
 		if (result == "" or len(result) < 100):
 			print("empty result")
 			response = {

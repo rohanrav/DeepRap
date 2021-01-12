@@ -86,11 +86,8 @@ h1 {
 }
 
 .main-text {
-	position: absolute;
-	width: 1140px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-15%, -370%);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .results-from {
@@ -107,7 +104,7 @@ h4 {
 
 h2 {
 	text-align: center;
-    margin-top: 130px;
+    margin-top: 20px;
 }
 
 p {
