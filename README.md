@@ -1,4 +1,4 @@
-![alt text](https://github.com/rohanrav/DeepRap/master/DeepRap?raw=true)
+![](https://github.com/rohanrav/DeepRap/master/DeepRap/Shot.png?raw=true)
 
 # DeepRap
 Eminem lyric generator using LSTM networks.
