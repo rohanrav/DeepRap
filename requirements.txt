@@ -1,5 +1,5 @@
 tensorflow>=2.4
-flask==1.1.2
+flask==2.3.2
 keras==2.4.3
 pandas==1.0.5
 numpy==1.18.5
